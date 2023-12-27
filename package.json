@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "prepare-client": "cd client && npm install && npm run build",
+    "prepare-server": "cd server && npm install",
+    "heroku-postbuild": "npm run prepare-client && npm run prepare-server",
+    "start": "cd server && npm start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "homepage": "https://yokipu.com/stream",
+  "dependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}
